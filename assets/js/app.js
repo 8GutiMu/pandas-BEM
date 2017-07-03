@@ -2,11 +2,26 @@ var cargarPagina = function(){
     
     textoOrigen();
     textoExtincion();
+    eliminarPanditas();
+    restaurarPanditas();
 }
 
+var restaurarPanditas = function(){
+    
+    $(".botones__btn--restaurar").click(function(){
+        $(".fotos").show();
+    });
+    
+}
 
 var eliminarPanditas = function(){
-    $cerrar = $(".fotos__panda--cerrar")
+    $cerrar = $(".fotos__panda--cerrar");
+    
+  
+    $cerrar.click(function(){
+        $(this).hide();
+    });
+    
 }
 
 
