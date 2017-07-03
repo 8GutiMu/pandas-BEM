@@ -9,7 +9,8 @@ var cargarPagina = function(){
 var restaurarPanditas = function(){
     
     $(".botones__btn--restaurar").click(function(){
-        $(".fotos").show();
+        $(".fotos").show()
+            $(".fotos").children().show();
     });
     
 }
