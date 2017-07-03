@@ -1,0 +1,32 @@
+[class*="col-"] {
+    min-height: 7px;
+    float: left;
+}
+
+.row {
+    &:before {
+        content: " ";
+        display: table;
+    }
+    &:after {
+        @extend .row:before;
+        clear: both;
+    }
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+	display: block;
+}
+
+@function anchoColumnas($columns) {
+    @return percentage(($columns/12));
+}
+
+@for $numColumna from 1 through 12 {
+    .col-#{$numColumna} {
+        width: anchoColumnas($numColumna);
+    }
+}
