@@ -1,1 +1,68 @@
 @import "grid";
+@import "funciones";
+
+$gris: #535657;
+$azul: #4F646F;
+$beige: #DEE7E7;
+$blanco: #F4FAFF;
+
+
+
+*{
+    margin: 0;
+}
+.nav{
+    background: $beige;
+    text-align: center;
+    height: 100px;
+    
+    &__li{
+       @include marginTop(40px);
+        display: inline-block;
+        list-style: none;
+        color:$gris;
+        
+        margin-left: 1%;
+        &:hover
+        {
+            color: $azul;
+            text-decoration: line-through;
+            text-decoration-color: $azul;
+        }
+    }
+}
+
+.fotos{
+     @include marginTop(20px);
+    display: flex;
+    flex-direction: row;
+    &__panda{
+        &--opacidad{
+            &:hover{
+                opacity: 0.5;
+            }
+        }
+    }
+       
+}
+.botones{
+    @include marginTop(20px);
+    text-align: center;
+    &__btn{
+        background-color: $azul;
+        color: $beige;
+        &--activo{
+            &:hover{
+                background-color: $beige;
+                color: &azul;
+            }
+        }
+    }
+}
+
+.texto{
+    &__parrafo{
+        @include marginTop(20px);
+        padding: 20px;
+    }
+}
